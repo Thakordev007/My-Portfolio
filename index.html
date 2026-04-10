@@ -4,182 +4,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Dev's Portfolio</title>
+  <meta name="description"
+    content="Dev Thakor — Python developer building Django, Flask, and modern web experiences. Portfolio, projects, and contact.">
+  <title>Dev Thakor · Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
+  <div class="noise" aria-hidden="true"></div>
   <header>
-    <h1>Dev’s Portfolio</h1>
-    <div class="hamburger" id="hamburger">
+    <a href="#home" class="logo">Dev<span class="logo-dot">.</span></a>
+    <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
       <span></span><span></span><span></span>
     </div>
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="hire.html">Hire Me!</a></li>
+        <li><a href="hire.html" class="nav-cta">Hire Me</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero" id="home">
-    <div class="overlay"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="text">
-        <h2>👋Hello, I'm <span>Dev</span></h2>
+
+        <h1>Hello, I'm <span class="name-highlight">Dev</span></h1>
         <p class="typing" id="typing-text"></p>
-        <a href="#projects" class="btn">🚀 See My Work</a>
-        <a href="#" class="btn" id="resumeBtn">📄 View Resume</a>
-        <a href="hire.html" class="btn btn-outline">📞 Hiring Me</a>
+        <p class="hero-lead">I craft reliable backends, clear APIs, and interfaces people enjoy using.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#" class="btn btn-ghost" id="resumeBtn">Resume</a>
+          <a href="hire.html" class="btn btn-outline">Hire me</a>
+        </div>
       </div>
       <div class="image">
-        <img src="image/profile.png" alt="Profile">
+        <div class="image-ring"></div>
+        <img src="image/profile.png" alt="Dev Thakor portrait">
       </div>
     </div>
   </section>
 
   <section id="about" class="about scroll-item">
-    <h2>About Me</h2>
-    <p>Hi 👋, I'm <strong>Dev Thakor</strong>, a passionate <b>Python Developer</b> specialized in building scalable web
-      applications and APIs using <b>Django</b> and <b>Flask</b>. I enjoy turning complex problems into simple, elegant
-      solutions with clean code. With experience in <b>MySQL</b>, <b>JavaScript</b>, and modern web design, I love
-      creating applications that are both functional and user-friendly. Always eager to learn new technologies and grow
-      as a developer 🚀.</p>
+    <div class="section-head">
+
+      <h2>About</h2>
+      <p class="section-sub">Python-first builder focused on clarity and scale.</p>
+    </div>
+    <div class="about-panel">
+      <p>I'm <strong>Dev Thakor</strong>, a <b>Python Developer</b> who ships web applications and APIs with
+        <b>Django</b>
+        and <b>Flask</b>. I like turning messy requirements into maintainable code, pairing solid data modeling with
+        thoughtful UI. Comfortable across <b>MySQL</b>, <b>JavaScript</b>, and modern layout work—I aim for products
+        that feel as good as they function. Always learning, always shipping.
+      </p>
+    </div>
   </section>
 
-  <section class="container scroll-item" id="projects">
-    <div class="card scroll-item">
-      <img src="image/dataanalytics.jpg" alt="Dashboard showing data analytics visualization">
-      <div class="card-content">
-        <h2>Data Analytics Tools</h2>
-        <p>A powerful tool to analyze, visualize, and extract insights from complex datasets.</p>
-        <a href="https://github.com/Thakordev007" class="btn" target="_blank">View Project</a>
-      </div>
+  <section class="projects-wrap scroll-item" id="projects">
+    <div class="section-head">
+
+      <h2>My Projects</h2>
+      <p class="section-sub">Each project includes details and a live path—swap demo URLs in the script block when you
+        deploy.</p>
     </div>
-    <div class="card scroll-item">
-      <img src="image/e-commarce.png" alt="E-commerce shopping platform">
-      <div class="card-content">
-        <h2>ApnaStore E-commerce Website</h2>
-        <p>A complete online shopping platform with product listings, cart, and secure checkout.</p>
-        <a href="https://github.com/Thakordev007/ApnaStore_fashion-Website.git" class="btn" target="_blank">View
-          Project</a>
-      </div>
-    </div>
-    <div class="card scroll-item">
-      <img src="image/resto-manage.png" alt="Restaurant management dashboard">
-      <div class="card-content">
-        <h2>Restaurant Manager</h2>
-        <p>An app to manage restaurant orders, tables, and billing efficiently.</p>
-        <a href="https://github.com/Thakordev007" class="btn" target="_blank">View Project</a>
-      </div>
-    </div>
-    <div class="card scroll-item">
-      <img src="image/weather.png" alt="Weather forecast app interface">
-      <div class="card-content">
-        <h2>Weather App</h2>
-        <p>A web app that shows real-time weather updates with city search functionality.</p>
-        <a href="https://github.com/Thakordev007" class="btn" target="_blank">View Project</a>
-      </div>
-    </div>
-    <div class="card scroll-item">
-      <img src="image/quize.jpg" alt="Quiz application screen">
-      <div class="card-content">
-        <h2>Quiz App</h2>
-        <p>An interactive quiz platform with multiple-choice questions and scoring system.</p>
-        <a href="https://github.com/Thakordev007" class="btn" target="_blank">View Project</a>
-      </div>
-    </div>
-    <div class="card scroll-item">
-      <img src="image/medical.png" alt="Medical platform user interface">
-      <div class="card-content">
-        <h2>Medicare Platform</h2>
-        <p>A healthcare app to book doctor appointments, manage records, and consult online.</p>
-        <a href="https://github.com/Thakordev007" class="btn" target="_blank">View Project</a>
-      </div>
+    <div class="projects-grid container">
+      <article class="project-card scroll-item" data-project-id="analytics">
+        <div class="project-media">
+          <img src="image/dataanalytics.jpg" alt="Data analytics dashboard preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Analytics · Python</span>
+          <h3>Data Analytics Tools</h3>
+          <p>Explore, visualize, and summarize datasets with practical charts and exports.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="apnastore">
+        <div class="project-media">
+          <img src="image/e-commarce.png" alt="ApnaStore e-commerce preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">E-commerce · Full stack</span>
+          <h3>ApnaStore</h3>
+          <p>Shopping flows with catalog, cart, and checkout patterns ready for production polish.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="restaurant">
+        <div class="project-media">
+          <img src="image/resto-manage.png" alt="Restaurant manager app preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Operations · Web app</span>
+          <h3>Restaurant Manager</h3>
+          <p>Orders, tables, and billing in one place for smoother service workflows.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="weather">
+        <div class="project-media">
+          <img src="image/weather.png" alt="Weather application preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Frontend · API</span>
+          <h3>Weather App</h3>
+          <p>City search, current conditions, and a clean layout for quick glances.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="quiz">
+        <div class="project-media">
+          <img src="image/quize.jpg" alt="Quiz app preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Interactive · JS</span>
+          <h3>Quiz App</h3>
+          <p>Multiple-choice sets, scoring, and feedback for engaging practice sessions.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="medicare">
+        <div class="project-media">
+          <img src="image/medical.png" alt="Medicare platform preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Healthcare · UX</span>
+          <h3>Medicare Platform</h3>
+          <p>Appointment booking, records, and consultation flows tailored for patients.</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card scroll-item" data-project-id="campusconnect">
+        <div class="project-media">
+          <img src="image/campus.jpg" alt="Campus Connect preview">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Campus Connect UX</span>
+          <h3>Campus Connect</h3>
+          <p>A modern campus management portal for exams, results, study materials, and events</p>
+          <div class="project-actions">
+            <button type="button" class="btn-project btn-show">Show</button>
+            <a class="btn-project btn-live" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
+
+  <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"
+    hidden>
+    <div class="project-modal__backdrop" data-close-project></div>
+    <div class="project-modal__panel">
+      <button type="button" class="project-modal__close" data-close-project
+        aria-label="Close project details">&times;</button>
+      <div class="project-modal__media">
+        <img id="projectModalImg" src="" alt="">
+      </div>
+      <div class="project-modal__content">
+        <p class="project-modal__tag" id="projectModalTag"></p>
+        <h3 id="projectModalTitle"></h3>
+        <p class="project-modal__desc" id="projectModalDesc"></p>
+        <ul class="project-modal__features" id="projectModalFeatures"></ul>
+        <div class="project-modal__stack" id="projectModalStack"></div>
+        <div class="project-modal__links">
+          <a id="projectModalRepo" class="btn btn-ghost btn-sm" href="#" target="_blank"
+            rel="noopener noreferrer">Source code</a>
+          <a id="projectModalLive" class="btn btn-primary btn-sm" href="#" target="_blank"
+            rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="skills" class="skills scroll-item">
-    <h2>My Skills</h2>
-    <div class="skill">
-      <p>HTML</p>
-      <div class="progress-bar">
-        <div class="progress html">95%</div>
-      </div>
+    <div class="section-head">
+
+      <h2>Skills</h2>
+      <p class="section-sub">Comfort across the stack, strongest on the server side.</p>
     </div>
-    <div class="skill">
-      <p>CSS</p>
-      <div class="progress-bar">
-        <div class="progress css">90%</div>
+    <div class="skills-inner">
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress-bar">
+          <div class="progress html">95%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>Python</p>
-      <div class="progress-bar">
-        <div class="progress js">85%</div>
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress-bar">
+          <div class="progress css">90%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="progress-bar">
-        <div class="progress python">80%</div>
+      <div class="skill">
+        <p>Python</p>
+        <div class="progress-bar">
+          <div class="progress js">85%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>MySQL</p>
-      <div class="progress-bar">
-        <div class="progress mysql">75%</div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress-bar">
+          <div class="progress python">80%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>Flask</p>
-      <div class="progress-bar">
-        <div class="progress flask">70%</div>
+      <div class="skill">
+        <p>MySQL</p>
+        <div class="progress-bar">
+          <div class="progress mysql">75%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>Django</p>
-      <div class="progress-bar">
-        <div class="progress django">85%</div>
+      <div class="skill">
+        <p>Flask</p>
+        <div class="progress-bar">
+          <div class="progress flask">70%</div>
+        </div>
       </div>
-    </div>
-    <div class="skill">
-      <p>MongoDB</p>
-      <div class="progress-bar">
-        <div class="progress mongodb">60%</div>
+      <div class="skill">
+        <p>Django</p>
+        <div class="progress-bar">
+          <div class="progress django">85%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>MongoDB</p>
+        <div class="progress-bar">
+          <div class="progress mongodb">60%</div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="certificates" class="certificates scroll-item">
-    <h2>🎓 Certificates & Seminars</h2>
+    <div class="section-head">
+
+      <h2>Certificates & seminars</h2>
+      <p class="section-sub">Learning in public—credentials that shaped my craft.</p>
+    </div>
     <div class="cert-container">
       <div class="cert-card scroll-item">
         <img src="image/certificate.jpg" alt="Jumbleed Programming Certificate">
         <h3>Jumbleed Programming</h3>
         <p>Hands-on programming seminar improving logic and problem-solving skills.</p>
-        <button class="view-btn" onclick="openCert('image/c3.jpeg')">View Certificate</button>
+        <button type="button" class="view-btn" onclick="openCert('image/c3.jpeg')">View Certificate</button>
       </div>
       <div class="cert-card scroll-item">
-        <img src="image/certificate.jpg" alt="Digital Marketing Certificate">
+        <img src="image/certificate.jpg" alt="Digital Marketing & Full Stack Developer Certificate">
         <h3>Digital Marketing</h3>
-        <p>Workshop on online branding, SEO, and social media strategy.</p>
-        <button class="view-btn" onclick="openCert('image/c2.jpeg')">View Certificate</button>
+        <p>Workshop on online branding, SEO, and social media strategy. Training on front-end & back-end development
+          tools.</p>
+        <button type="button" class="view-btn" onclick="openCert('image/c2.jpeg')">View Certificate</button>
       </div>
       <div class="cert-card scroll-item">
-        <img src="image/certificate.jpg" alt="Full Stack Developer Certificate">
-        <h3>Full Stack Developer</h3>
-        <p>Comprehensive training on front-end & back-end development tools.</p>
-        <button class="view-btn" onclick="openCert('image/c2.jpeg')">View Certificate</button>
+        <img src="image/certificate.jpg" alt="Generative AI workshop">
+        <h3>Generative AI Workshop</h3>
+        <p>AI-driven solutions, problem-solving, and innovation-focused sessions.</p>
+        <button type="button" class="view-btn" onclick="openCert('image/c4.jpeg')">View Certificate</button>
       </div>
       <div class="cert-card scroll-item">
         <img src="image/certificate.jpg" alt="Java Training Certificate">
         <h3>Java Training</h3>
         <p>Intensive course covering Java basics to advanced concepts.</p>
-        <button class="view-btn" onclick="openCert('image/c1.jpeg')">View Certificate</button>
+        <button type="button" class="view-btn" onclick="openCert('image/c1.jpeg')">View Certificate</button>
+      </div>
+      <div class="cert-card scroll-item">
+        <img src="image/certificate.jpg" alt="Aaviskar Project Fair">
+        <h3>Aaviskar Project Fair</h3>
+        <p>Presented an innovative project; strengthened teamwork and presentation skills.</p>
+        <button type="button" class="view-btn" onclick="openCert('image/c5.jpeg')">View Certificate</button>
       </div>
     </div>
   </section>
@@ -190,7 +318,11 @@
   </div>
 
   <section id="contact" class="contact scroll-item">
-    <h2>Contact Me 📞</h2>
+    <div class="section-head">
+
+      <h2>Contact</h2>
+      <p class="section-sub">Tell me about your product, timeline, and stack—I reply within a day when possible.</p>
+    </div>
     <form id="contactForm">
       <input type="text" name="from_name" placeholder="Your Name" required>
       <input type="email" name="email_name" placeholder="Your Email" required>
@@ -203,29 +335,28 @@
   <footer class="site-footer">
     <div class="footer-columns">
       <div class="footer-col">
-        <h3>🧑‍💻 About Me</h3>
-        <p>Hi, I'm <strong>Dev</strong>, a Python Developer passionate about building scalable web apps, APIs, and
-          automation tools.</p>
+        <h3>About</h3>
+        <p>I'm <strong>Dev</strong>, a Python developer focused on scalable web apps, APIs, and thoughtful UX.</p>
       </div>
       <div class="footer-col">
-        <h3>🔗 Quick Links</h3>
+        <h3>Quick links</h3>
         <div class="social">
-          <a href="#home">⬆️ Back to top</a>
-          <a href="#projects">📂 Projects</a>
-          <a href="#contact">✉️ Contact</a>
+          <a href="#home">Back to top</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
       <div class="footer-col">
-        <h3>🌐 Connect</h3>
+        <h3>Connect</h3>
         <div class="social">
-          <a href="https://github.com/Thakordev007" target="_blank">🐙 GitHub</a>
-          <a href="https://linkedin.com/in/dev-thakor-0a2477298" target="_blank">💼 LinkedIn</a>
-          <a href="mailto:dev@gmail.com">📧 Email</a>
+          <a href="https://github.com/Thakordev007" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/dev-thakor-0a2477298" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:dev@gmail.com">Email</a>
         </div>
       </div>
     </div>
     <div class="meta">
-      <p>© <span id="year"></span> • Dev Thakor •</p>
+      <p>© <span id="year"></span> Dev Thakor</p>
     </div>
   </footer>
 
@@ -236,10 +367,10 @@
         <span id="closeResume" style="cursor:pointer;font-size:1.5rem">&times;</span>
       </div>
       <div class="resume-body">
-        <iframe src="files/my-resume.pdf" type="application/pdf"></iframe>
+        <iframe src="files/my-resume.pdf" title="Resume PDF"></iframe>
       </div>
       <div class="resume-footer">
-        <a href="files/my-resume.pdf" download>⬇ Download PDF</a>
+        <a href="files/my-resume.pdf" download>Download PDF</a>
       </div>
     </div>
   </div>
@@ -247,6 +378,172 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const portfolioProjects = {
+      analytics: {
+        title: 'Data Analytics Tools',
+        tag: 'Analytics · Python',
+        description: 'A toolkit for exploring spreadsheets and APIs: clean data, chart trends, and export summaries stakeholders can act on.',
+        image: 'image/dataanalytics.jpg',
+        imageAlt: 'Data analytics dashboard preview',
+        stack: ['Python', 'Pandas', 'Visualization', 'CSV / API ingestion'],
+        features: ['Dataset profiling and cleaning helpers', 'Chart-ready aggregates', 'Export paths for reports'],
+        repo: 'https://github.com/Thakordev007/Data-Analysis-Tool.git',
+        live: 'https://data-analysis-tool-0hpu.onrender.com'
+      },
+      apnastore: {
+        title: 'ApnaStore E-commerce',
+        tag: 'E-commerce · Full stack',
+        description: 'Fashion-focused storefront with catalog browsing, cart logic, and checkout-oriented flows—structured for payments and inventory hooks.',
+        image: 'image/e-commarce.png',
+        imageAlt: 'ApnaStore e-commerce preview',
+        stack: ['Django / Flask', 'HTML & CSS', 'JavaScript', 'SQL'],
+        features: ['Product listing and detail views', 'Cart session handling', 'Checkout-ready structure'],
+        repo: 'https://github.com/Thakordev007/ApnaStore_fashion-Website.git',
+        live: 'https://apnastore-fashion-website.onrender.com'
+      },
+      restaurant: {
+        title: 'Restaurant Manager',
+        tag: 'Operations · Web app',
+        description: 'Back-office style app to track tables, orders, and billing so staff spend less time on spreadsheets.',
+        image: 'image/resto-manage.png',
+        imageAlt: 'Restaurant manager app preview',
+        stack: ['Python', 'Web framework', 'Database', 'REST-style routes'],
+        features: ['Order lifecycle views', 'Table state tracking', 'Billing summaries'],
+        repo: 'https://github.com/Thakordev007/Python_Projects.git',
+        live: ''
+      },
+      weather: {
+        title: 'Weather App',
+        tag: 'Frontend · API',
+        description: 'Search cities, pull live weather data, and present conditions in a minimal, readable layout.',
+        image: 'image/weather.png',
+        imageAlt: 'Weather application preview',
+        stack: ['JavaScript', 'Fetch / APIs', 'HTML & CSS'],
+        features: ['City search', 'Current conditions display', 'Responsive layout'],
+        repo: 'https://github.com/Thakordev007/Python_Projects.git',
+        live: ''
+      },
+      quiz: {
+        title: 'Quiz App',
+        tag: 'Interactive · JavaScript',
+        description: 'Timed or relaxed quizzes with multiple-choice sets, score tally, and replay-friendly structure.',
+        image: 'image/quize.jpg',
+        imageAlt: 'Quiz app preview',
+        stack: ['JavaScript', 'DOM', 'CSS'],
+        features: ['Question sets and scoring', 'Instant feedback', 'Lightweight UI states'],
+        repo: 'https://github.com/Thakordev007/Python_Projects.git',
+        live: ''
+      },
+      medicare: {
+        title: 'Medicare Platform',
+        tag: 'Healthcare · UX',
+        description: 'Patient-oriented flows for booking, records, and online consultation placeholders—privacy-minded structure for real deployments.',
+        image: 'image/medical.png',
+        imageAlt: 'Medicare platform preview',
+        stack: ['Python', 'Web stack', 'Auth-ready patterns', 'SQL'],
+        features: ['Appointment booking flow', 'Record placeholders', 'Consultation entry points'],
+        repo: 'https://github.com/Thakordev007/Medicare-Medical-Platform.git',
+        live: 'https://medicare-medical-platform.onrender.com'
+      },
+
+      campusconnect: {
+        title: 'Campus Connect',
+        tag: 'Campus Portal · Full Stack',
+        description: 'An all-in-one campus management platform for handling exams, results, study materials, and events with secure role-based access for students, faculty, and admins.',
+        image: 'image/campus.jpg',
+        imageAlt: 'Campus management dashboard preview',
+        stack: ['Django REST Framework', 'React + Vite', 'Tailwind CSS', 'JWT Auth', 'MongoDB'],
+        features: [
+          'Role-based dashboards for Admin, Faculty, and Students',
+          'Exam creation, management, and search system',
+          'Result publishing and student access',
+          'Study material upload and download support',
+          'Campus event management module'
+        ],
+        repo: 'https://github.com/Thakordev007/Campus-Connect.git',
+        live: ''
+      },
+    };
+
+    function applyProjectLinks() {
+      document.querySelectorAll('[data-project-id]').forEach(function (card) {
+        var id = card.getAttribute('data-project-id');
+        var meta = portfolioProjects[id];
+        if (!meta) return;
+        var liveA = card.querySelector('.btn-live');
+        if (!liveA) return;
+        if (meta.live && meta.live.trim()) {
+          liveA.href = meta.live.trim();
+          liveA.classList.remove('btn-live--muted');
+          liveA.removeAttribute('title');
+        } else {
+          liveA.href = meta.repo;
+          liveA.classList.add('btn-live--muted');
+          liveA.title = 'Set portfolioProjects.' + id + '.live to your deploy URL. Until then this opens the repository.';
+        }
+      });
+    }
+
+    function openProjectModal(id) {
+      var meta = portfolioProjects[id];
+      if (!meta) return;
+      var modal = document.getElementById('projectModal');
+      document.getElementById('projectModalTitle').textContent = meta.title;
+      document.getElementById('projectModalTag').textContent = meta.tag;
+      document.getElementById('projectModalDesc').textContent = meta.description;
+      var img = document.getElementById('projectModalImg');
+      img.src = meta.image;
+      img.alt = meta.imageAlt || '';
+
+      var ul = document.getElementById('projectModalFeatures');
+      ul.innerHTML = '';
+      (meta.features || []).forEach(function (f) {
+        var li = document.createElement('li');
+        li.textContent = f;
+        ul.appendChild(li);
+      });
+
+      var stackEl = document.getElementById('projectModalStack');
+      stackEl.innerHTML = '';
+      (meta.stack || []).forEach(function (s) {
+        var span = document.createElement('span');
+        span.className = 'stack-pill';
+        span.textContent = s;
+        stackEl.appendChild(span);
+      });
+
+      document.getElementById('projectModalRepo').href = meta.repo;
+      var live = (meta.live && meta.live.trim()) ? meta.live.trim() : meta.repo;
+      document.getElementById('projectModalLive').href = live;
+      document.getElementById('projectModalLive').classList.toggle('btn-live--muted', !(meta.live && meta.live.trim()));
+
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      var modal = document.getElementById('projectModal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    applyProjectLinks();
+
+    document.querySelectorAll('.project-card .btn-show').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('[data-project-id]');
+        if (card) openProjectModal(card.getAttribute('data-project-id'));
+      });
+    });
+
+    document.getElementById('projectModal').addEventListener('click', function (e) {
+      if (e.target.matches('[data-close-project]')) closeProjectModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !document.getElementById('projectModal').hidden) closeProjectModal();
+    });
+
     const hamburger = document.getElementById('hamburger');
     const navbar = document.querySelector('#navbar ul');
     hamburger.addEventListener('click', () => {
@@ -267,7 +564,7 @@
       if (e.target === modal) modal.style.display = "none";
     });
     const typingText = document.getElementById("typing-text");
-    const roles = ["Python Developer", "Web Designer", "UI/UX Designer", "Creative Coder"];
+    const roles = ["Python Developer", "Web Developer", "API & Backend Builder", "Product-minded Coder"];
     let roleIndex = 0, charIndex = 0, deleting = false;
     function typeEffect() {
       let currentRole = roles[roleIndex];
@@ -296,18 +593,18 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       statusBox.style.display = 'block';
-      statusBox.style.background = '#60A5FA';
-      statusBox.style.color = '#fff';
-      statusBox.textContent = '📧 Sending message...';
+      statusBox.style.background = 'rgba(99, 102, 241, 0.25)';
+      statusBox.style.color = '#e2e8f0';
+      statusBox.textContent = 'Sending message…';
       emailjs.sendForm('service_1jq0emb', 'template_3u3z017', this).then(function () {
-        statusBox.style.background = '#6EE7B7';
-        statusBox.style.color = '#022235';
-        statusBox.textContent = '✅ Message sent successfully!';
+        statusBox.style.background = 'rgba(16, 185, 129, 0.25)';
+        statusBox.style.color = '#d1fae5';
+        statusBox.textContent = 'Message sent successfully.';
         form.reset();
       }, function (error) {
-        statusBox.style.background = '#ef4444';
-        statusBox.style.color = '#fff';
-        statusBox.textContent = '❌ Failed to send: ' + error.text;
+        statusBox.style.background = 'rgba(239, 68, 68, 0.25)';
+        statusBox.style.color = '#fecaca';
+        statusBox.textContent = 'Failed to send: ' + error.text;
       });
     });
     const certModal = document.getElementById('certModal');
